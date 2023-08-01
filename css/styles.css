@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*! animations */
+@keyframes floating{
+    0%{
+        margin-top: 0px;
+    }
+    50%{
+        margin-top: calc(var(--index) * 1);
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+
+/*! rood dir */
+:root{
+    --index: calc(1vh + 1vw);
+}
+
+/*! header */
+header{
+    background: url("../img/Sprite-0002.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-backgound{
+    position: absolute;
+    background: url("../img/front.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+/*! logo */
+
+.logo{
+    position: relative;
+    background: url("../img/header-logo.png");
+    width: calc(var(--index)* 25);
+    height: calc(var(--index) * 25);
+    transform: scale(1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 2;
+    filter: drop-shadow(0 0 20px rgb(0, 0, 0));  
+}
+.logo_img{
+    position: absolute;
+    background: url("../img/aseprite-no-border.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: calc(var(--index)* 10);
+    height: calc(var(--index)* 10);
+    transform: scale(1);
+    top: calc(50vh * .4); 
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 20px rgb(0, 0, 0)) 
+    drop-shadow(0 0 1px rgb(255, 255, 255));
+    animation: floating 3s infinite cubic-bezier(0.1, 0, 0.5, 2);
+}
+
+/* ! islands */
+.island_1, .island_2{
+    background: url("../img/ilend.png");
+    position: absolute;
+    width: calc(var(--index)* 10);
+    height: calc(var(--index)* 10);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: floating 5s infinite cubic-bezier(0.1, 0, 0.5, 2) ;
+    filter: drop-shadow(0 25px 20px rgb(39, 39, 39));
+}
+.island_1{
+    top: 20%;
+    left: 10%;
+    transform: scale(1) rotate(-10deg);
+}
+.island_2{
+    top: 30%;
+    left: 70%;
+    transform: translateX(-30%);
+    transform: scale(0.8) rotate(15deg);
+    animation-delay: 1s;
+}
+/* ! small_islands */
+.small_island{
+    background: url("../img/ilend_sall.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: drop-shadow(0 25px 20px rgb(39, 39, 39))
+}
+.sm1, .sm2, .sm3 {
+    width: calc(var(--index)* 13);
+    height: calc(var(--index)* 13);
+    animation: floating 5s infinite cubic-bezier(0.1, 0, 0.5, 2);
+    position: absolute;
+}
+.sm1{
+    top: calc(2.6vh * 21);
+    transform: scale(0.2);
+}
+.sm2{
+    top: calc(2.6vh * 20);
+    right: calc(2vw * 23);
+    transform: scale(0.3) rotate(-10deg);
+    animation-delay: 1s;
+}
+.sm3{
+    top: calc(2.6vh * 20);
+    left: calc(2vw * 23);
+    transform: scale(0.25) rotate(12deg);
+    animation-delay: .5s;
+}
+/*! main */
+main{
+    background: url("../img/amin_bg.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* ! madia */
+/* @media (min-width: 768px) and (max-width: 1407px) {
+    
+}
+*/
+@media (max-width: 800px) {
+    .island_1, .island_2{
+        display: none;
+    }
+} 
+
+@media (max-width: 600px) {
+
+}
