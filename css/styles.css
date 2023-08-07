@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-shadow: 4px 4px 0 black;
+    text-align: center;
 }
 /*! animations */
 @keyframes floating{
@@ -20,17 +24,31 @@
 :root{
     --index: calc(1vh + 1vw);
 }
+/*! for-all-pages*/
 
-/*! header */
 header{
-    background: url("../img/Sprite-0002.png");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*! index-page*/
+
+/*! header */
+
+.main-page-header{
+    height: 100vh;
+    background: url("../img/Sprite-0002.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .front-backgound{
@@ -130,9 +148,9 @@ header{
     animation-delay: .5s;
 }
 /*! main */
-main{
+
+.main-page-main{
     background: url("../img/amin_bg.png");
-    height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -173,8 +191,8 @@ main{
 }
   
 .grid-item {
-    width: 20px;
-    height: 20px;
+    width: calc(var(--index)* 1);
+    height: calc(var(--index)* 1);
 }
 .grid-item:hover{
     background-color: white !important;
@@ -186,6 +204,7 @@ main{
     flex-direction: column;
 }
 .draw-buttons > button{
+    margin: 10px;
     border: 0;
     opacity: 0.7;
 }
@@ -196,26 +215,88 @@ main{
 .draw-buttons > button:hover{
     opacity: 1;
 }
-/* ! madia */
-/* @media (min-width: 768px) and (max-width: 1407px) {
-    
+
+/*! contact-page*/
+
+/*! header*/
+
+/*! main*/
+.contact-page-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/Sprite-0002.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left;
+    filter:brightness(.8);
+    z-index: -1;
 }
-*/
+.contact-wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-logo{
+    width: calc(var(--index)* 10);
+    height: calc(var(--index)* 10);
+    left: calc(var(--index) * 15);
+}
+.form-wrapper{
+    width: calc(var(--index)* 30);
+    height: 100%;
+    background: url("../img/amin_bg.png");
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 0 30px rgb(32, 32, 32), -10px 0 30px rgb(32, 32, 32);
+}
+.fomr-feald{
+    margin-block: calc(var(--index)* 2);
+}
+label {
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+input {
+    padding: 10px;
+    background-color: #3a3a3a;
+    width: calc(var(--index) * 20);
+}
+form > button{
+    padding: 20px;
+    background-color: #646464;
+    transition: .4s;
+}
+form > button:hover{
+    background-color: rgb(147, 196, 74);
+}
+
+
+/* ! madia */
 @media (max-width: 800px) {
+    /* ! index */
     .island_1, .island_2{
         display: none;
     }
-    /* .drawer-wrapper{
+    
+} 
+@media (max-width: 1000px){
+    /* ! contact */
+    .contact-wrapper{
         flex-direction: column;
     }
-    .color-palette{
-        flex-direction: row;
+    .contact-logo{
+        top: calc(1vh * 3);
+        left: calc(1vw * 50);
     }
-    .draw-buttons{
-        flex-direction: row;
-    } */
-} 
-
-@media (max-width: 600px) {
-
+    .form-wrapper{
+        width: 100%;
+    }  
 }
