@@ -34,6 +34,9 @@ main{
 }
 .navbar{
     z-index: 100;
+    background: url("../img/front.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .navbar > .container > a > img{
     margin: 0 !important;
@@ -215,6 +218,7 @@ main{
 .draw-buttons > button > img{
     width: calc(var(--index)* 5);
     height: calc(var(--index)* 5);
+    margin: 0 ;
 }
 .draw-buttons > button:hover{
     opacity: 1;
@@ -352,10 +356,28 @@ form > button:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+}
+.draw-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(59, 59, 59, 0.5);
+    box-shadow: 0 10px 0 white,
+                0 -10px 0 white ;
+    margin-block: 30px;
 }
 .draw-section > p, img{
     margin: 30px;
-
+}
+.draw-section > p {
+    font-size: calc(var(--index)* 1);
+}
+.carousel-item > img {
+    width: calc(var(--index) * 45);
+    height: calc(var(--index) * 25);
 }
 .info-section{
     background-color: rgb(59, 59, 59, 0.5);
@@ -426,6 +448,7 @@ form > button:hover{
 }
 .download > a {
     text-decoration: none;
+    color: white;
 }
 .download:hover{
     background-color: #2f2f2f;
