@@ -32,14 +32,40 @@ main{
     justify-content: center;
     align-items: center;
 }
-.navbar{
-    z-index: 100;
-    background: url("../img/front.png");
-    background-position: center;
-    background-repeat: no-repeat;
+.side-nav{
+    opacity: 0.7;
 }
-.navbar > .container > a > img{
-    margin: 0 !important;
+.side-nav{
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    background: url("../img/amin_bg.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 10px 0 0 rgb(88, 88, 88, 0.5),
+                0 10px 0 rgb(88, 88, 88, 0.5),
+                0 -10px 0 rgb(88, 88, 88, 0.5);
+}
+.side-nav > ul{
+    list-style: none;
+}
+
+.side-nav > ul > li{
+    border-top: solid 5px #646464;
+    border-left: solid 5px #646464;
+    border-right: solid 5px rgb(66, 66, 66);
+    border-bottom: solid 5px rgb(66, 66, 66);
+    margin: 20px;
+}
+.side-nav > ul > li > a > img{
+    margin: 0;
+    background-color: #c9de9d;
+}
+.side-nav:hover{
+    opacity: 1;
+}
+.side-nav > ul > li:hover{
+    opacity: 0.7;
 }
 
 /*! index-page*/
