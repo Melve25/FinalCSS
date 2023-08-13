@@ -11,6 +11,14 @@ const brush = document.getElementById('brush')
 const eraser = document.getElementById('eraser')
 const reset = document.getElementById('reset')
 
+const toggleButton = document.getElementById('toggleButton');
+const sidebar = document.getElementsByClassName('side-nav')[0];
+
+
+toggleButton.addEventListener('click', function(){
+  sidebar.classList.toggle('hide');
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     //! fillin the grid

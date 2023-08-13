@@ -35,7 +35,7 @@ main{
 .side-nav{
     position: fixed;
     left: 0;
-    top: 30%;
+    top: calc(1vh * 30);
     z-index: 100;
     background: url("../img/amin_bg.png");
     background-position: center;
@@ -67,6 +67,26 @@ main{
 }
 .side-nav > ul > li:hover{
     opacity: 0.7;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 30%;
+    left: 110%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgb(212, 223, 114);
+    padding: 10px;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    color: black;
+    text-shadow: none;
+    box-shadow: 0 5px 0 white,
+                0 -5px 0 white, 
+                -5px 0 0 white;
+}
+.hide{
+    left: -100px;
 }
 
 /*! index-page*/
@@ -309,7 +329,7 @@ video{
     height: 100%;
     background: url("../img/Sprite-0002.png");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: left;
     filter:brightness(.8);
     z-index: -1;
