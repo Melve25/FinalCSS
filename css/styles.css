@@ -38,6 +38,7 @@ main{
 .side-nav{
     position: fixed;
     left: 0;
+    top: 30%;
     z-index: 100;
     background: url("../img/amin_bg.png");
     background-position: center;
@@ -48,6 +49,7 @@ main{
 }
 .side-nav > ul{
     list-style: none;
+    padding: 0;
 }
 
 .side-nav > ul > li{
