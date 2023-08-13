@@ -33,9 +33,6 @@ main{
     align-items: center;
 }
 .side-nav{
-    opacity: 0.7;
-}
-.side-nav{
     position: fixed;
     left: 0;
     top: 30%;
@@ -43,9 +40,11 @@ main{
     background: url("../img/amin_bg.png");
     background-position: center;
     background-size: cover;
+    opacity: 0.7;
     box-shadow: 10px 0 0 rgb(88, 88, 88, 0.5),
                 0 10px 0 rgb(88, 88, 88, 0.5),
                 0 -10px 0 rgb(88, 88, 88, 0.5);
+    transition: all 1s;
 }
 .side-nav > ul{
     list-style: none;
@@ -188,6 +187,7 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    flex-direction: column;
 }
 
 /*! drawer-wrapper */
@@ -233,7 +233,7 @@ main{
     background-color: white !important;
 }
 
-/*! bottons */
+/*! buttons */
 .draw-buttons{
     display: flex;
     flex-direction: column;
@@ -252,6 +252,52 @@ main{
     opacity: 1;
 }
 
+.main-page-section > div{
+    margin-block: 30px;
+    max-width: calc(var(--index) * 40);
+}
+.main-page-section > div > h1{
+    margin-block: 30px;
+    background: linear-gradient(135deg, #7ebc12 20%, #FABE0E 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+.vid-page-section > h2{
+    margin-block: 20px;
+    background: linear-gradient(135deg, #a0e128 20%, #e758f4 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    font-size: calc(var(--index)* 1) !important;
+}
+.main-page-section > div > h3{
+    background: linear-gradient(135deg, #12b3bc 20%, #ea2dfb 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+.main-page-section > div > ul{
+    width: calc(var(--index) * 20);
+    margin: auto;
+}
+.main-page-section > div > ul > li{
+    font-size: 12px;
+    list-style: square;
+    margin-block: 30px;
+}
+
+.vid-page-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+video{
+    border: solid 3px white;
+    margin-block: 30px;
+    width: calc(var(--index) * 40);
+}
 /*! contact-page*/
 
 /*! header*/
@@ -315,6 +361,7 @@ form > button:hover{
     background-color: rgb(147, 196, 74);
 }
 
+
 /*! about page*/
 .about-page-main{
     background: url("../img/amin_bg.png");
@@ -322,6 +369,7 @@ form > button:hover{
     background-size: cover;
     background-repeat: no-repeat;
     flex-direction: column;
+    padding-block: 50px;
 }
 .about-page-main > div{
     width: 100%;
@@ -477,6 +525,7 @@ form > button:hover{
 .download > a {
     text-decoration: none;
     color: white;
+    width: 100%;
 }
 .download:hover{
     background-color: #2f2f2f;
@@ -489,6 +538,11 @@ form > button:hover{
     /* ! index */
     .island_1, .island_2{
         display: none;
+    }
+    video{
+        border: solid 3px white;
+        margin-block: 30px;
+        width: calc(var(--index) * 25);
     }
     
     
