@@ -20,7 +20,7 @@ toggleButton.addEventListener('click', function(){
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
     //! fillin the grid
     const rows = 32; 
     const cols = 32; 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //! consts
     const gridItems = document.querySelectorAll(".grid-item");
 
-    //! func to drow
+    //! func to draw
     function draw(event){
         //* getting the current grid cell
         const target = event.target;
